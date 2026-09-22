@@ -1,0 +1,1249 @@
+/* =========================================================
+   HAYFA MADINA
+   LOGIN PAGE (THEME: GOLD & CREAM)
+   ========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+
+    /* Base Dark Background diganti ke nuansa Dark Warm Slate/Brown agar serasi dengan Gold */
+    background: #181512;
+
+    overflow-x: hidden;
+}
+
+
+/* =========================================================
+   LOGIN WRAPPER
+   ========================================================= */
+
+.login-wrapper {
+    position: relative;
+
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px;
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   GLOBAL BACKGROUND GLOW
+   ========================================================= */
+
+.glow {
+    position: fixed;
+
+    border-radius: 50%;
+
+    pointer-events: none;
+
+    filter: blur(100px);
+
+    z-index: 0;
+}
+
+.glow-1 {
+    width: 450px;
+    height: 450px;
+
+    top: -220px;
+    left: -180px;
+
+    background: rgba(234, 183, 40, 0.14); /* Accent #EAB728 */
+}
+
+.glow-2 {
+    width: 400px;
+    height: 400px;
+
+    right: -180px;
+    bottom: -220px;
+
+    background: rgba(188, 132, 22, 0.12); /* Accent #BC8416 */
+}
+
+
+/* =========================================================
+   LOGIN CONTAINER
+   ========================================================= */
+
+.login-container {
+    position: relative;
+
+    z-index: 5;
+
+    width: 100%;
+    max-width: 1050px;
+
+    min-height: 620px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 0.9fr;
+
+    overflow: hidden;
+
+    background: #FFF7E9; /* Cream Background */
+
+    border-radius: 28px;
+
+    box-shadow:
+        0 30px 80px rgba(0, 0, 0, 0.45);
+}
+
+
+/* =========================================================
+   LEFT BRAND AREA
+   ========================================================= */
+
+.login-brand {
+    position: relative;
+
+    min-width: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 60px;
+
+    color: #FFF7E9;
+
+    overflow: hidden;
+
+    isolation: isolate;
+
+    background:
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(234, 183, 40, 0.20),
+            transparent 35%
+        ),
+        linear-gradient(
+            145deg,
+            #1d160c 0%,
+            #2a1f10 55%,
+            #3b2b14 100%
+        );
+}
+
+
+/* =========================================================
+   ANIMATED BACKGROUND LAYER
+   ========================================================= */
+
+.animated-bg {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+
+    pointer-events: none;
+
+    z-index: -1;
+}
+
+
+/* =========================================================
+   FLOATING ORBS
+   ========================================================= */
+
+.floating-orb {
+    position: absolute;
+
+    border-radius: 50%;
+
+    pointer-events: none;
+
+    filter: blur(50px);
+
+    opacity: 0.25;
+}
+
+.orb-1 {
+    width: 220px;
+    height: 220px;
+
+    top: -100px;
+    right: -80px;
+
+    background: #EAB728;
+
+    animation:
+        orbFloatOne 9s ease-in-out infinite;
+}
+
+.orb-2 {
+    width: 250px;
+    height: 250px;
+
+    bottom: -140px;
+    left: -100px;
+
+    background: #BC8416;
+
+    animation:
+        orbFloatTwo 11s ease-in-out infinite;
+}
+
+.orb-3 {
+    width: 120px;
+    height: 120px;
+
+    top: 45%;
+    right: 10%;
+
+    background: #EAB728;
+
+    opacity: 0.15;
+
+    filter: blur(35px);
+
+    animation:
+        orbFloatThree 7s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   PARTICLES
+   ========================================================= */
+
+.particle {
+    position: absolute;
+
+    width: 4px;
+    height: 4px;
+
+    border-radius: 50%;
+
+    background: #EAB728;
+
+    opacity: 0.35;
+
+    box-shadow:
+        0 0 8px rgba(234, 183, 40, 0.8);
+
+    animation:
+        particleMove 8s ease-in-out infinite;
+}
+
+
+/* Particle positions */
+
+.particle-1 {
+    top: 15%;
+    left: 12%;
+    animation-delay: 0s;
+}
+
+.particle-2 {
+    top: 28%;
+    left: 38%;
+    animation-delay: 2s;
+}
+
+.particle-3 {
+    top: 18%;
+    right: 18%;
+    animation-delay: 4s;
+}
+
+.particle-4 {
+    top: 52%;
+    left: 18%;
+    animation-delay: 1s;
+}
+
+.particle-5 {
+    top: 65%;
+    left: 48%;
+    animation-delay: 3s;
+}
+
+.particle-6 {
+    top: 72%;
+    right: 15%;
+    animation-delay: 5s;
+}
+
+.particle-7 {
+    top: 42%;
+    right: 35%;
+    animation-delay: 2.5s;
+}
+
+.particle-8 {
+    top: 82%;
+    left: 28%;
+    animation-delay: 1.5s;
+}
+
+.particle-9 {
+    top: 35%;
+    left: 70%;
+    animation-delay: 4.5s;
+}
+
+.particle-10 {
+    top: 88%;
+    right: 32%;
+    animation-delay: 6s;
+}
+
+
+/* =========================================================
+   ANIMATED RINGS
+   ========================================================= */
+
+.animated-ring {
+    position: absolute;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(234, 183, 40, 0.12);
+
+    pointer-events: none;
+}
+
+.ring-1 {
+    width: 650px;
+    height: 650px;
+
+    top: -380px;
+    left: -240px;
+
+    animation:
+        ringFloatOne 12s ease-in-out infinite;
+}
+
+.ring-2 {
+    width: 500px;
+    height: 500px;
+
+    right: -270px;
+    bottom: -320px;
+
+    animation:
+        ringFloatTwo 15s ease-in-out infinite;
+}
+
+.ring-3 {
+    width: 350px;
+    height: 350px;
+
+    right: -180px;
+    top: 20%;
+
+    border-color: rgba(234, 183, 40, 0.08);
+
+    animation:
+        ringRotate 20s linear infinite;
+}
+
+
+/* =========================================================
+   SMALL LIGHT STREAK
+   ========================================================= */
+
+.light-streak {
+    position: absolute;
+
+    width: 300px;
+    height: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(234, 183, 40, 0.45),
+            transparent
+        );
+
+    opacity: 0.4;
+
+    transform: rotate(-25deg);
+
+    animation:
+        streakMove 8s ease-in-out infinite;
+}
+
+.streak-1 {
+    top: 25%;
+    left: -350px;
+}
+
+.streak-2 {
+    top: 65%;
+    right: -350px;
+
+    animation-delay: 3s;
+}
+
+
+/* =========================================================
+   DECORATIVE BRAND CIRCLE
+   ========================================================= */
+
+.brand-circle {
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(234, 183, 40, 0.12);
+
+    bottom: -280px;
+    left: -180px;
+
+    pointer-events: none;
+
+    z-index: 1;
+}
+
+.brand-circle::after {
+    content: "";
+
+    position: absolute;
+
+    width: 350px;
+    height: 350px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(234, 183, 40, 0.08);
+
+    top: 70px;
+    left: 70px;
+}
+
+
+/* =========================================================
+   BRAND CONTENT
+   ========================================================= */
+
+.brand-content {
+    position: relative;
+
+    z-index: 10;
+
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   LOGO
+   ========================================================= */
+
+.logo {
+    position: relative;
+
+    z-index: 11;
+
+    display: block;
+
+    width: 330px;
+    max-width: 90%;
+
+    height: auto;
+
+    margin: 0 auto 30px;
+
+    filter:
+        drop-shadow(
+            0 15px 25px
+            rgba(188, 132, 22, 0.25)
+        );
+}
+
+
+/* =========================================================
+   BRAND LINE
+   ========================================================= */
+
+.brand-line {
+    position: relative;
+
+    width: 55px;
+    height: 4px;
+
+    margin: 0 auto 22px;
+
+    border-radius: 10px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #EAB728,
+            #BC8416
+        );
+
+    box-shadow:
+        0 0 15px rgba(234, 183, 40, 0.35);
+}
+
+
+/* =========================================================
+   BRAND TITLE
+   ========================================================= */
+
+.brand-title {
+    position: relative;
+
+    font-size: 25px;
+
+    font-weight: 600;
+
+    color: #FFF7E9;
+
+    letter-spacing: -0.5px;
+
+    margin-bottom: 10px;
+}
+
+
+/* =========================================================
+   BRAND DESCRIPTION
+   ========================================================= */
+
+.brand-description {
+    position: relative;
+
+    max-width: 400px;
+
+    margin: 0 auto;
+
+    color: rgba(255, 247, 233, 0.7);
+
+    font-size: 14px;
+
+    font-weight: 400;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   RIGHT LOGIN AREA
+   ========================================================= */
+
+.login-form-wrapper {
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 60px 65px;
+
+    background: #FFF7E9;
+}
+
+
+/* =========================================================
+   LOGIN FORM
+   ========================================================= */
+
+.login-form {
+    width: 100%;
+
+    max-width: 380px;
+}
+
+
+/* =========================================================
+   WELCOME
+   ========================================================= */
+
+.welcome {
+    margin-bottom: 35px;
+}
+
+.welcome h2 {
+    margin: 0 0 8px;
+
+    color: #2a1f10;
+
+    font-size: 28px;
+
+    font-weight: 600;
+
+    letter-spacing: -0.5px;
+}
+
+.welcome p {
+    margin: 0;
+
+    color: #7a664d;
+
+    font-size: 13px;
+
+    font-weight: 400;
+}
+
+
+/* =========================================================
+   FLASH MESSAGE
+   ========================================================= */
+
+.message {
+    margin-bottom: 20px;
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   FORM GROUP
+   ========================================================= */
+
+.form-group {
+    margin-bottom: 21px;
+}
+
+
+/* =========================================================
+   LABEL
+   ========================================================= */
+
+.form-label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #4a3b2c;
+
+    font-size: 13px;
+
+    font-weight: 500;
+}
+
+
+/* =========================================================
+   INPUT WRAPPER
+   ========================================================= */
+
+.input-wrapper {
+    position: relative;
+
+    width: 100%;
+}
+
+
+/* =========================================================
+   INPUT ICON
+   ========================================================= */
+
+.input-icon {
+    position: absolute;
+
+    left: 16px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: #a8947d;
+
+    font-size: 14px;
+
+    pointer-events: none;
+
+    transition: color 0.25s ease;
+
+    z-index: 2;
+}
+
+
+/* =========================================================
+   INPUT
+   ========================================================= */
+
+.form-control-custom {
+    width: 100%;
+
+    height: 50px;
+
+    padding:
+        0 45px
+        0 45px;
+
+    border: 1px solid #e2d5c3;
+
+    border-radius: 12px;
+
+    outline: none;
+
+    background: #fcf6eb;
+
+    color: #2a1f10;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 13px;
+
+    font-weight: 400;
+
+    transition:
+        border-color 0.25s ease,
+        background 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.form-control-custom::placeholder {
+    color: #b3a28f;
+}
+
+.form-control-custom:hover {
+    border-color: #BC8416;
+}
+
+.form-control-custom:focus {
+    border-color: #EAB728;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 0 0 4px
+        rgba(234, 183, 40, 0.18);
+}
+
+
+/* Change icon color when input focused */
+
+.input-wrapper:focus-within .input-icon {
+    color: #BC8416;
+}
+
+
+/* =========================================================
+   PASSWORD TOGGLE
+   ========================================================= */
+
+.password-toggle {
+    position: absolute;
+
+    right: 14px;
+    top: 50%;
+
+    width: 28px;
+    height: 28px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    transform: translateY(-50%);
+
+    padding: 0;
+
+    border: none;
+
+    background: transparent;
+
+    color: #a8947d;
+
+    cursor: pointer;
+
+    z-index: 5;
+
+    transition: color 0.2s ease;
+}
+
+.password-toggle:hover {
+    color: #BC8416;
+}
+
+.password-toggle:focus {
+    outline: none;
+}
+
+.password-toggle i {
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   LOGIN BUTTON
+   ========================================================= */
+
+.login-button {
+    width: 100%;
+
+    height: 50px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    margin-top: 8px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #EAB728 0%,
+            #BC8416 100%
+        );
+
+    color: #FFF7E9;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 10px 25px
+        rgba(188, 132, 22, 0.30);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        filter 0.25s ease;
+}
+
+.login-button:hover {
+    transform: translateY(-2px);
+
+    filter: brightness(1.05);
+
+    box-shadow:
+        0 14px 30px
+        rgba(188, 132, 22, 0.40);
+}
+
+.login-button:active {
+    transform: translateY(0);
+
+    box-shadow:
+        0 7px 15px
+        rgba(188, 132, 22, 0.25);
+}
+
+.login-button i {
+    font-size: 13px;
+
+    transition:
+        transform 0.25s ease;
+}
+
+.login-button:hover i {
+    transform: translateX(4px);
+}
+
+
+/* =========================================================
+   LOGIN FOOTER
+   ========================================================= */
+
+.login-footer {
+    margin-top: 28px;
+
+    text-align: center;
+
+    color: #8c7860;
+
+    font-size: 11px;
+
+    font-weight: 400;
+}
+
+
+/* =========================================================
+   ANIMATIONS
+   ========================================================= */
+
+
+/* ORB 1 */
+
+@keyframes orbFloatOne {
+
+    0% {
+        transform:
+            translate3d(0, 0, 0)
+            scale(1);
+    }
+
+    50% {
+        transform:
+            translate3d(-45px, 50px, 0)
+            scale(1.15);
+    }
+
+    100% {
+        transform:
+            translate3d(0, 0, 0)
+            scale(1);
+    }
+}
+
+
+/* ORB 2 */
+
+@keyframes orbFloatTwo {
+
+    0% {
+        transform:
+            translate3d(0, 0, 0)
+            scale(1);
+    }
+
+    50% {
+        transform:
+            translate3d(60px, -40px, 0)
+            scale(1.12);
+    }
+
+    100% {
+        transform:
+            translate3d(0, 0, 0)
+            scale(1);
+    }
+}
+
+
+/* ORB 3 */
+
+@keyframes orbFloatThree {
+
+    0% {
+        transform:
+            translate3d(0, 0, 0)
+            scale(1);
+    }
+
+    50% {
+        transform:
+            translate3d(-30px, 35px, 0)
+            scale(1.2);
+    }
+
+    100% {
+        transform:
+            translate3d(0, 0, 0)
+            scale(1);
+    }
+}
+
+
+/* PARTICLES */
+
+@keyframes particleMove {
+
+    0% {
+        transform:
+            translate3d(0, 0, 0)
+            scale(0.8);
+
+        opacity: 0.15;
+    }
+
+    25% {
+        transform:
+            translate3d(15px, -20px, 0)
+            scale(1.2);
+
+        opacity: 0.55;
+    }
+
+    50% {
+        transform:
+            translate3d(-10px, -40px, 0)
+            scale(0.9);
+
+        opacity: 0.25;
+    }
+
+    75% {
+        transform:
+            translate3d(20px, -20px, 0)
+            scale(1.15);
+
+        opacity: 0.45;
+    }
+
+    100% {
+        transform:
+            translate3d(0, 0, 0)
+            scale(0.8);
+
+        opacity: 0.15;
+    }
+}
+
+
+/* RING 1 */
+
+@keyframes ringFloatOne {
+
+    0% {
+        transform:
+            translate3d(0, 0, 0)
+            rotate(0deg);
+    }
+
+    50% {
+        transform:
+            translate3d(30px, -25px, 0)
+            rotate(5deg);
+    }
+
+    100% {
+        transform:
+            translate3d(0, 0, 0)
+            rotate(0deg);
+    }
+}
+
+
+/* RING 2 */
+
+@keyframes ringFloatTwo {
+
+    0% {
+        transform:
+            translate3d(0, 0, 0)
+            rotate(0deg);
+    }
+
+    50% {
+        transform:
+            translate3d(-35px, 25px, 0)
+            rotate(-5deg);
+    }
+
+    100% {
+        transform:
+            translate3d(0, 0, 0)
+            rotate(0deg);
+    }
+}
+
+
+/* RING 3 */
+
+@keyframes ringRotate {
+
+    from {
+        transform:
+            rotate(0deg);
+    }
+
+    to {
+        transform:
+            rotate(360deg);
+    }
+}
+
+
+/* LIGHT STREAK */
+
+@keyframes streakMove {
+
+    0% {
+        transform:
+            translate3d(0, 0, 0)
+            rotate(-25deg);
+
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 0.5;
+    }
+
+    50% {
+        transform:
+            translate3d(450px, 80px, 0)
+            rotate(-25deg);
+
+        opacity: 0.15;
+    }
+
+    80% {
+        opacity: 0;
+    }
+
+    100% {
+        transform:
+            translate3d(700px, 120px, 0)
+            rotate(-25deg);
+
+        opacity: 0;
+    }
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .login-container {
+        max-width: 520px;
+
+        grid-template-columns: 1fr;
+
+        min-height: auto;
+    }
+
+    .login-brand {
+        min-height: 330px;
+
+        padding:
+            45px
+            30px;
+    }
+
+    .logo {
+        width: 260px;
+
+        margin-bottom: 20px;
+    }
+
+    .brand-title {
+        font-size: 21px;
+    }
+
+    .brand-description {
+        display: none;
+    }
+
+    .brand-line {
+        margin-bottom: 16px;
+    }
+
+    .login-form-wrapper {
+        padding:
+            45px
+            35px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 500px) {
+
+    .login-wrapper {
+        padding: 15px;
+    }
+
+    .login-container {
+        border-radius: 20px;
+    }
+
+    .login-brand {
+        min-height: 270px;
+
+        padding:
+            35px
+            20px;
+    }
+
+    .logo {
+        width: 220px;
+
+        margin-bottom: 18px;
+    }
+
+    .brand-title {
+        font-size: 19px;
+    }
+
+    .login-form-wrapper {
+        padding:
+            35px
+            25px;
+    }
+
+    .welcome {
+        margin-bottom: 28px;
+    }
+
+    .welcome h2 {
+        font-size: 24px;
+    }
+
+    .welcome p {
+        font-size: 12px;
+    }
+
+    .form-control-custom,
+    .login-button {
+        height: 48px;
+    }
+
+    .ring-1 {
+        width: 450px;
+        height: 450px;
+    }
+
+    .ring-2 {
+        width: 350px;
+        height: 350px;
+    }
+}
+
+
+/* =========================================================
+   REDUCE MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+    }
+}
