@@ -817,16 +817,16 @@ class Hm_penawaran extends CI_Controller
             $t_cpdf->SetX($right_column_x - 4);
             $t_cpdf->Cell(25, 5, 'Hotel ' . $hotel->kota, 0, 0,);
             $t_cpdf->SetFont('ZapfDingbats');
-            // $stars = '';
-            // for ($i = 0; $i < 5; $i++) {
-            //     if ($i < $hotel->rating) {
-            //         $stars .= chr(72);
-            //     } else {
-            //         $stars .= chr(73);
-            //     }
-            // }
-            // $t_cpdf->cell(15, 5, $stars, 0, 0);
-            $t_cpdf->cell(15, 5, '', 0, 0);
+            $stars = '';
+            for ($i = 0; $i < 5; $i++) {
+                if ($i < $hotel->rating) {
+                    $stars .= chr(72);
+                } else {
+                    $stars .= chr(73);
+                }
+            }
+            $t_cpdf->cell(15, 5, $stars, 0, 0);
+            // $t_cpdf->cell(15, 5, '', 0, 0);
             $t_cpdf->SetFont('poppins-regular', '', 9);
             $t_cpdf->cell(3, 5, ':', 0, 0);
             $t_cpdf->Cell(40, 5, $hotel->nama_hotel, 0, 1);
