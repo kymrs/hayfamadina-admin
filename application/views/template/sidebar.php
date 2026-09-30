@@ -10,12 +10,12 @@
 
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="https://mobileautocare.co.id/" target="_blank">
-                <!-- <div class="sidebar-brand-icon">
-                    <img src="<?= base_url('assets/backend/img/mobileautocare-white.png') ?>" alt="mac" width="95">
-                </div> -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="https://hayfamadina.id/" target="_blank">
+                <div class="sidebar-brand-icon">
+                    <img src="<?= base_url('assets/backend/img/hayfamadina-white.png') ?>" alt="mac" width="95">
+                </div>
                 <!-- <div class="sidebar-brand-text mx-3" style="position: relative; right: 30px; color: #9AA0B1">Local Dashboard</div> -->
-                <h1 style="font-size: 1.1rem; font-weight: bold; margin-bottom: 0">Local Dashboard</h1>
+                <!-- <h1 style="font-size: 1.1rem; font-weight: bold; margin-bottom: 0">Local Dashboard</h1> -->
             </a>
 
             <!-- Divider -->

@@ -231,8 +231,8 @@ EOD;
         $t_cpdf2->SetX(4);
 
         $t_cpdf2->SetFont('Poppins-Bold', '', 11);
-        $t_cpdf2->Cell(19, 9, 'Atas Nama : PT. Kolaborasi Para Sahabat', 0, 1);
-
+        
+        $t_cpdf2->Cell(19, 9, 'Atas Nama : PT. Safar Amanah Madani', 0, 1);
         $t_cpdf2->setY($t_cpdf2->GetY());
         $t_cpdf2->SetX(4);
 

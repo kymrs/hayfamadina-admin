@@ -1,0 +1,132 @@
+/* =========================================================
+   CUSTOM THEME UNTUK SB ADMIN 2
+   ========================================================= */
+
+/* 1. SIDEBAR BACKGROUND (Mengganti Gradient Bawaan SB Admin 2) */
+#accordionSidebar,
+.sidebar {
+    background: linear-gradient(180deg, #1E1302 0%, #3A2706 100%) !important;
+    border-right: 1px solid rgba(234, 183, 40, 0.2);
+}
+
+/* Brand / Logo Area Sidebar */
+.sidebar .sidebar-brand {
+    color: #ffffff !important; /* Dikembalikan ke putih */
+}
+
+.sidebar .sidebar-brand .sidebar-brand-text {
+    color: #ffffff !important; /* Dikembalikan ke putih */
+    font-weight: 600;
+}
+
+.sidebar hr.sidebar-divider {
+    border-top: 1px solid rgba(234, 183, 40, 0.15) !important;
+}
+
+.sidebar .sidebar-heading {
+    color: rgba(255, 255, 255, 0.6) !important; /* Dikembalikan ke putih murni */
+}
+
+/* 2. MENU UTAMA SIDEBAR */
+.sidebar .nav-item .nav-link {
+    color: rgba(255, 255, 255, 0.85) !important; /* Dikembalikan ke putih murni */
+    transition: all 0.25s ease !important;
+}
+
+.sidebar .nav-item .nav-link i {
+    color: #EAB728 !important; /* Warna Ikon */
+    display: inline-block;
+    transition: transform 0.25s ease, color 0.25s ease !important; /* Transition untuk animasi ikon */
+}
+
+/* Hover Menu Utama: Animasi Ikon Bergeser ke Kiri */
+.sidebar .nav-item .nav-link:hover {
+    color: #ffffff !important; /* Dikembalikan ke putih */
+    background: rgba(234, 183, 40, 0.12) !important;
+}
+
+.sidebar .nav-item .nav-link:hover i {
+    color: #ffffff !important; /* Dikembalikan ke putih */
+    transform: translateX(1px) !important; /* Animasi ikon bergeser ke kiri */
+}
+
+/* Menu Utama Aktif */
+.sidebar .nav-item.active .nav-link {
+    color: #ffffff !important; /* Dikembalikan ke putih */
+    font-weight: 600;
+    background: rgba(234, 183, 40, 0.18) !important;
+}
+
+.sidebar .nav-item.active .nav-link i {
+    color: #EAB728 !important;
+}
+
+/* 3. MENGUBAH POP-UP / COLLAPSE SUBMENU SIDEBAR */
+.sidebar .nav-item .collapse .collapse-inner,
+.sidebar .nav-item .collapsing .collapse-inner {
+    background: #1E1302 !important; /* Background submenu gelap senada sidebar */
+    border: 1px solid rgba(234, 183, 40, 0.25) !important;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35) !important;
+    border-radius: 12px !important;
+}
+
+/* Header Judul di Dalam Submenu */
+.sidebar .nav-item .collapse .collapse-inner .collapse-header {
+    color: #EAB728 !important;
+}
+
+/* Item Link Submenu */
+.sidebar .nav-item .collapse .collapse-inner .collapse-item {
+    color: rgba(255, 255, 255, 0.8) !important; /* Dikembalikan ke putih murni */
+    transition: all 0.2s ease !important;
+}
+
+/* Hover Item Submenu */
+.sidebar .nav-item .collapse .collapse-inner .collapse-item:hover {
+    background: rgba(234, 183, 40, 0.15) !important;
+    color: #EAB728 !important;
+    padding-left: 1.25rem !important;
+}
+
+/* Submenu Aktif */
+.sidebar .nav-item .collapse .collapse-inner .collapse-item.active {
+    color: #EAB728 !important;
+    font-weight: bold;
+    background: transparent !important;
+}
+
+/* 4. TOPBAR / NAVBAR ATAS */
+.topbar,
+nav.navbar {
+    background-color: #ffffff !important; /* Dikembalikan ke putih murni */
+    border-bottom: 1px solid #e3e6f0 !important;
+    box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 39, 6, 0.08) !important;
+}
+
+.topbar .nav-item .nav-link {
+    color: #3A2706 !important;
+}
+
+.topbar .topbar-divider {
+    border-right: 1px solid #e3e6f0 !important;
+}
+
+/* 5. BACKGROUND HALAMAN UTAMA & FOOTER */
+#content-wrapper {
+    background-color: #f8f9fc !important; /* Background abu-abu terang bawaan SB Admin 2 */
+}
+
+footer.sticky-footer {
+    background-color: #ffffff !important; /* Dikembalikan ke putih murni */
+    border-top: 1px solid #e3e6f0 !important;
+    color: #858796 !important;
+}
+
+/* Tombol Toggle Sidebar Round Button at Bottom */
+#sidebarToggle {
+    background-color: rgba(234, 183, 40, 0.2) !important;
+}
+
+#sidebarToggle:hover {
+    background-color: rgba(234, 183, 40, 0.4) !important;
+}

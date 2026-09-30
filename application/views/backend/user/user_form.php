@@ -69,7 +69,7 @@ $core_array = explode(',', $core);
 
     /* modal */
     .modal-input {
-        background-color: rgb(36, 44, 73);
+        background-color: #3a2706;
         color: white;
         border: none;
         padding: 5px 15px;
@@ -99,7 +99,7 @@ $core_array = explode(',', $core);
         <div class="col-lg-12">
             <div class="card shadow mb-4">
                 <div class="card-header text-right">
-                    <a class="btn btn-secondary btn-sm" href="<?= base_url('user') ?>"><i class="fas fa-chevron-left"></i>&nbsp;Back</a>
+                    <a class="btn btn-primary btn-sm" href="<?= base_url('user') ?>"><i class="fas fa-chevron-left"></i>&nbsp;Back</a>
                 </div>
                 <div class="card-body">
                     <form id="form" enctype="multipart/form-data">

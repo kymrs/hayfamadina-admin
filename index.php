@@ -1,25 +1,25 @@
 <?php
 
-$allowed = [
-    "https://agen.pengenumroh.com",
-    "https://member.pengenumroh.com",
-    "https://survey.pengenumroh.com",
-    "https://bymoment.id"
-];
+// $allowed = [
+//     "https://agen.hayfamadina.id",
+//     "https://member.hayfamadina.id",
+//     "https://survey.hayfamadina.id",
+//     "https://bymoment.id"
+// ];
 
-$origin = $_SERVER['HTTP_ORIGIN'] ?? '';
+// $origin = $_SERVER['HTTP_ORIGIN'] ?? '';
 
-if (in_array($origin, $allowed)) {
-    header("Access-Control-Allow-Origin: " . $origin);
-    header("Access-Control-Allow-Methods: GET, POST, OPTIONS, PUT, DELETE");
-    header("Access-Control-Allow-Headers: Content-Type, Authorization");
-}
+// if (in_array($origin, $allowed)) {
+//     header("Access-Control-Allow-Origin: " . $origin);
+//     header("Access-Control-Allow-Methods: GET, POST, OPTIONS, PUT, DELETE");
+//     header("Access-Control-Allow-Headers: Content-Type, Authorization");
+// }
 
-// HANDLE OPTIONS GLOBAL (INI KUNCI)
-if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
-    http_response_code(200);
-    exit();
-}
+// // HANDLE OPTIONS GLOBAL (INI KUNCI)
+// if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
+//     http_response_code(200);
+//     exit();
+// }
 
 /**
  * CodeIgniter

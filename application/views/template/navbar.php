@@ -6,7 +6,7 @@
       </button>
       <!-- Date & Time -->
       <div class="navbar-datetime d-none d-md-flex align-items-center">
-          <div class="datetime-icon">
+          <div class="datetime-icon" style="color: #EAB728;">
               <i class="fas fa-calendar-alt"></i>
           </div>
 
@@ -72,7 +72,7 @@
               </div>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+              <button type="button" class="btn btn-primary" data-dismiss="modal">Batal</button>
               <button type="button" class="btn btn-primary" id="btnChangePassword">Ubah Password</button>
             </div>
           </form>
@@ -171,7 +171,7 @@
             `${day}, ${date} ${month} ${year}`;
 
         document.getElementById('currentTime').innerHTML =
-            `${hours}:${minutes}:${seconds} <span class="timezone">${timezone}</span>`;
+            `${hours}:${minutes}:${seconds} <span class="timezone" style="color: #EAB728;">${timezone}</span>`;
     }
 
 

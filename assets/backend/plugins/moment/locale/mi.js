@@ -22,7 +22,7 @@
         monthsStrictRegex: /(?:['a-z\u0101\u014D\u016B]+\-?){1,3}/i,
         monthsShortRegex: /(?:['a-z\u0101\u014D\u016B]+\-?){1,3}/i,
         monthsShortStrictRegex: /(?:['a-z\u0101\u014D\u016B]+\-?){1,2}/i,
-        weekdays: 'Rātapu_Mane_Tūrei_Wenerei_Tāite_Paraire_Hātarei'.split('_'),
+        weekdays: 'Rātap_Mane_Tūrei_Wenerei_Tāite_Paraire_Hātarei'.split('_'),
         weekdaysShort: 'Ta_Ma_Tū_We_Tāi_Pa_Hā'.split('_'),
         weekdaysMin: 'Ta_Ma_Tū_We_Tāi_Pa_Hā'.split('_'),
         longDateFormat: {

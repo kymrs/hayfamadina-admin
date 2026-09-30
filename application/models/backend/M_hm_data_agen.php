@@ -3,12 +3,13 @@
 if (!defined('BASEPATH'))
     exit('No direct script access allowed');
 
-class M_mac_customer extends CI_Model
+class M_hm_data_agen extends CI_Model
 {
     var $id = 'id';
-    var $table = 'mac_customer'; //nama tabel dari database
-    var $column_order = array(null, null, 'customer_name', 'type_customer', 'no_telp', 'address', 'created_at');
-    var $column_search = array('customer_name', 'type_customer', 'no_telp', 'address', 'created_at'); //field yang diizin untuk pencarian 
+    var $table = 'hm_data_agen'; //nama tabel dari database
+    var $column_order = array(null, null, 'nama', 'no_telp', 'kode_referral', 'alamat', 'ktp', 'created_at');
+    var $column_search = array('nama', 'no_telp', 'kode_referral', 'alamat', 'ktp', 'created_at'); //field yang diizin untuk pencarian
+
     var $order = array('id' => 'desc'); // default order 
 
     public function __construct()
@@ -19,6 +20,7 @@ class M_mac_customer extends CI_Model
     private function _get_datatables_query()
     {
 
+        $this->db->order_by('id', 'desc');
         $this->db->from($this->table);
 
         $i = 0;

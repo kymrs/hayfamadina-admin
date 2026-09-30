@@ -218,7 +218,7 @@
 
                 // Build filter buttons for Menu column
                 var btnHtml = '';
-                btnHtml += '<button type="button" class="btn btn-sm btn-secondary menu-filter-btn active" data-menu-id="">All</button>';
+                btnHtml += '<button type="button" class="btn btn-sm btn-primary menu-filter-btn active" data-menu-id="">All</button>';
 
                 var imgBase = "<?= base_url('assets/backend/img/') ?>";
                 for (i = 0; i < data.length; i++) {
@@ -255,8 +255,8 @@
 
                 $('#menu-filter').off('click', '.menu-filter-btn').on('click', '.menu-filter-btn', function() {
                     selectedMenuFilterId = $(this).data('menu-id') || '';
-                    $('#menu-filter .menu-filter-btn').removeClass('active btn-secondary').addClass('btn-outline-secondary');
-                    $(this).addClass('active btn-secondary').removeClass('btn-outline-secondary');
+                    $('#menu-filter .menu-filter-btn').removeClass('active btn-primary').addClass('btn-outline-secondary');
+                    $(this).addClass('active btn-primary').removeClass('btn-outline-secondary');
                     table.ajax.reload();
                 });
             },

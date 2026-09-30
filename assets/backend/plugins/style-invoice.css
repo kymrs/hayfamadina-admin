@@ -110,7 +110,7 @@ main .invoice h3 {
 }
 
 .detail-pemesanan .header {
-    background-color: #FC7613;
+    background-color: #EAB728;
     padding: 3px 7px;
     color: #fff;
 }
@@ -158,7 +158,7 @@ main .invoice h3 {
 }
 
 .watermark {
-    border: 5px solid #FC7613;
+    border: 5px solid #EAB728;
     color: black;
     font-weight: bold;
     border-radius: 10px;

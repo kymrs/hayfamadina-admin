@@ -47,7 +47,7 @@
 }
 
 .header-table-transaksi {
-    background-color: rgb(36, 44, 73);
+    background-color: #3a2706;
     color: white;
 }
 
@@ -58,7 +58,7 @@
 }
 
 .btn-style {
-    background-color: rgb(36, 44, 73);
+    background-color: #3a2706;
     color: white;
     border: none;
     padding: 7px 23px;
