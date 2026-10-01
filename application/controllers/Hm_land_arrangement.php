@@ -207,7 +207,7 @@ class Hm_land_arrangement extends CI_Controller
 
         //GENERATE NOMOR ARSIP
         $urutan2 = str_pad($no_urut2, 2, "0", STR_PAD_LEFT);
-        $no_arsip = 'PU' . $year2 . $bulan . $urutan2;
+        $no_arsip = 'HM' . $year2 . $bulan . $urutan2;
 
         //CONVERT TIME
         // Ambil nilai input datetime dari form

@@ -185,11 +185,11 @@ class Hm_tanda_terima extends CI_Controller
 		$this->db->order_by('id', 'desc');
 		$data = $this->db->get('hm_tanda_terima')->row();
 		if ($data === null) {
-			$nomor = 'PU00001';
+			$nomor = 'HM00001';
 		} else {
 			$no = substr($data->nomor, 2);
 			$no_baru = intval($no) + 1;
-			$nomor = 'PU' . str_pad($no_baru, 5, "0", STR_PAD_LEFT);
+			$nomor = 'HM' . str_pad($no_baru, 5, "0", STR_PAD_LEFT);
 		}
 		return $nomor;
 	}

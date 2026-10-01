@@ -214,7 +214,7 @@ class Hm_penawaran extends CI_Controller
         $urutan2 = str_pad(number_format($no_urut2 + 1), 2, "0", STR_PAD_LEFT);
         $year2 = substr($date2, 0, 2);
         $bulan2 = substr($date2, 3, 2);
-        $no_arsip = 'PU' . $year2 . $bulan2 . $urutan2;
+        $no_arsip = 'HM' . $year2 . $bulan2 . $urutan2;
 
         //CONVERT TIME
         // Ambil nilai input datetime dari form
