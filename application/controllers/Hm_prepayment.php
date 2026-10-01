@@ -532,7 +532,7 @@ class Hm_prepayment extends CI_Controller
         $pdf->AddPage('P', 'Letter');
 
         // Logo
-        $pdf->Image(base_url('') . '/assets/backend/img/hayfa.png', 12, 7, 33, 30);
+        $pdf->Image(base_url('') . '/assets/backend/img/hayfamadina.pngg', 12, 7, 33, 30);
 
         $pdf->AddFont('Poppins-Regular', '', 'Poppins-Regular.php');
         $pdf->AddFont('Poppins-Bold', '', 'Poppins-Bold.php');
