@@ -134,7 +134,6 @@ class Hm_survey extends CI_Controller
             'q15' => $this->input->post('q15'),
             'q16' => $this->input->post('q16'),
             'q17' => $this->input->post('q17'),
-            'q18' => $this->input->post('q18'),
             'created_at' => date('Y-m-d H:i:s')
         );
 

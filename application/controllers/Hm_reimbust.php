@@ -333,7 +333,7 @@ class Hm_reimbust extends CI_Controller
         $pdf->SetAutoPageBreak(true, 5); // Margin bawah 15mm
 
         // Logo
-        $pdf->Image(base_url('') . '/assets/backend/img/hayfamadina.pngg', 10, 2, 41, 36);
+        $pdf->Image(base_url('') . '/assets/backend/img/hayfamadina.png', 10, 2, 41, 36);
 
         // Set font
         $pdf->AddFont('Poppins-Regular', '', 'Poppins-Regular.php');
@@ -875,7 +875,7 @@ class Hm_reimbust extends CI_Controller
                 $_FILES['file']['error'] = $_FILES['kwitansi']['error'][$i];
                 $_FILES['file']['size'] = $_FILES['kwitansi']['size'][$i];
 
-                $config['upload_path'] = './assets/backend/document/reimbust/kwitansi/kwitansi_hm';
+                $config['upload_path'] = './assets/backend/document/reimbust/kwitansi/kwitansi_hm/';
                 $config['allowed_types'] = 'jpeg|jpg|png';
                 $config['max_size'] = 3072; // Batasan ukuran file dalam kilobytes (3 MB)
                 $config['encrypt_name'] = TRUE;

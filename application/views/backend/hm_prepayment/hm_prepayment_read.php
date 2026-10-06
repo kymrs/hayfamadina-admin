@@ -38,7 +38,7 @@
                     <!-- Header Section -->
                     <div class="header">
                         <div class="header-field">
-                            <img src="<?= base_url('assets/backend/img/hayfamadina.pngg') ?>" alt="" class="logo">
+                            <img src="<?= base_url('assets/backend/img/hayfamadina.png') ?>" alt="" class="logo">
                             <table>
                                 <tr>
                                     <td style="font-weight: bold;">Prepayment</td>

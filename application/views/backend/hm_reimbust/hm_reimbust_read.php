@@ -35,7 +35,7 @@
             <!-- Header -->
             <div class="header">
                 <div class="logo">
-                    <img src="<?= base_url() ?>assets/backend/img/hayfamadina.pngg" alt="Logo">
+                    <img src="<?= base_url() ?>assets/backend/img/hayfamadina.png" alt="Logo">
                 </div>
                 <div class="title">
                     <h1>FORM PELAPORAN / REIMBUST</h1>
