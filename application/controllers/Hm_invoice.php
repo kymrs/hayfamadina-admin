@@ -1484,7 +1484,33 @@ EOD;
             ->row();
 
         // Initialize the TCPDF object
-        $t_cpdf2 = new t_cpdf2('P', 'mm', 'A4', true, 'UTF-8', false);
+        // Path kop surat (sesuaikan folder jika berbeda)
+        $kop_path = FCPATH . 'assets/backend/img/kop-surat-hayfamadina.png';
+
+        // Initialize the TCPDF object + kop surat di setiap halaman
+        $t_cpdf2 = new class('P', 'mm', 'A4', true, 'UTF-8', false) extends t_cpdf2 {
+            public $kop_path = '';
+
+            public function Header()
+            {
+                if (!empty($this->kop_path) && file_exists($this->kop_path)) {
+                    // Matikan auto page break sementara agar gambar tidak memicu halaman baru
+                    $bMargin = $this->getBreakMargin();
+                    $autoPageBreak = $this->getAutoPageBreak();
+                    $this->SetAutoPageBreak(false, 0);
+
+                    // Kop surat full lebar A4 (210mm), tinggi otomatis proporsional
+                    $this->Image($this->kop_path, 0, 0, 210, 0, 'PNG', '', '', false, 300, '', false, false, 0);
+
+                    // Kembalikan pengaturan page break
+                    $this->SetAutoPageBreak($autoPageBreak, $bMargin);
+                    $this->setPageMark();
+                }
+            }
+        };
+        $t_cpdf2->kop_path = $kop_path;
+        $t_cpdf2->setPrintHeader(true);
+        $t_cpdf2->setHeaderMargin(0);
 
         // Set document properties
         $t_cpdf2->SetCreator(PDF_CREATOR);
