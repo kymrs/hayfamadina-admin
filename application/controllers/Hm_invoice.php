@@ -1211,13 +1211,34 @@ class Hm_invoice extends CI_Controller
         $t_cpdf2->SetAuthor('Author Name');
         $t_cpdf2->SetTitle('Invoice HayfaMadina PDF');
 
-        $t_cpdf2->SetMargins(15, 40, 15); // Margin kiri, atas (untuk header), kanan
-        $t_cpdf2->SetAutoPageBreak(true, 15); // Penanganan otomatis margin bawah
+        // Matikan header & footer bawaan TCPDF (WAJIB sebelum AddPage)
+        $t_cpdf2->setPrintHeader(false);
+        $t_cpdf2->setPrintFooter(false);
+
+        $t_cpdf2->SetMargins(15, 40, 15); // Margin kiri, atas (untuk kop), kanan
+        $t_cpdf2->SetAutoPageBreak(true, 15);
 
         // Add a new page
         $t_cpdf2->AddPage();
 
-        $t_cpdf2->SetY($t_cpdf2->getMargins()['top']);
+        // ===== BACKGROUND KOP SURAT FULL 1 HALAMAN =====
+        $bMargin = $t_cpdf2->getBreakMargin();
+        $auto_page_break = $t_cpdf2->getAutoPageBreak();
+        $t_cpdf2->SetAutoPageBreak(false, 0);
+
+        $t_cpdf2->Image(
+            FCPATH . 'assets/backend/img/kop-surat-hayfamadina.png', // sesuaikan path
+            0, 0,
+            $t_cpdf2->getPageWidth(),
+            $t_cpdf2->getPageHeight(),
+            'PNG', '', '', false, 300, '', false, false, 0
+        );
+
+        $t_cpdf2->SetAutoPageBreak($auto_page_break, $bMargin);
+        $t_cpdf2->setPageMark();
+        // ===============================================
+
+        $t_cpdf2->SetXY(15, $t_cpdf2->getMargins()['top']);
 
         // Ganti Poppins dengan Helvetica (standar TCPDF)
         $t_cpdf2->SetFont('helvetica', 'B', 15);
