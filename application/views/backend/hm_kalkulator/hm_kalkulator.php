@@ -90,9 +90,9 @@
             <div class="absolute -bottom-10 -left-10 w-48 h-48 md:w-64 md:h-64 bg-sand-200 rounded-full mix-blend-multiply filter blur-3xl opacity-50"></div>
             
             <div class="relative z-10">
-                <p class="text-[10px] md:text-xs uppercase tracking-[.38em] text-primary-500 font-semibold mb-2 md:mb-3">Simulasi Transparan</p>
+                <p class="text-[10px] md:text-xs uppercase tracking-[.38em] text-primary-500 font-semibold mb-2 md:mb-3">Simulasi</p>
                 <h1 class="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-medium text-slate-800 leading-tight">
-                    Kalkulator <em class="gold-text">Angsuran</em>
+                    ANGSURAN <em class="gold-text">Umrah</em>
                 </h1>
             </div>
         </div>
