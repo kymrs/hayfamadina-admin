@@ -1511,6 +1511,7 @@ EOD;
         $t_cpdf2->kop_path = $kop_path;
         $t_cpdf2->setPrintHeader(true);
         $t_cpdf2->setHeaderMargin(0);
+        $t_cpdf2->setPrintFooter(false);
 
         // Set document properties
         $t_cpdf2->SetCreator(PDF_CREATOR);
@@ -1613,7 +1614,7 @@ EOD;
             </table>
         EOD;
 
-        $t_cpdf2->writeHTMLCell(184, 0, 14, $t_cpdf2->GetY() + 4, $table2, 0, 1, false, true, 'L', true);
+        // $t_cpdf2->writeHTMLCell(184, 0, 14, $t_cpdf2->GetY() + 4, $table2, 0, 1, false, true, 'L', true);
 
         // Tampilkan gambar bukti pembayaran jika ada
         if (!empty($kwitansi->bukti_pembayaran)) {
